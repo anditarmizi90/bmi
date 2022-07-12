@@ -5,3 +5,8 @@ TextStyle? labelTexstyle = TextStyle(
   fontSize: 18,
   color: Colors.white,
 );
+TextStyle numberStyle = TextStyle(
+  fontSize: 50,
+  fontWeight: FontWeight.bold,
+  color: Colors.white,
+);
