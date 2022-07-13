@@ -25,11 +25,52 @@ class BmiResultScreen extends StatelessWidget {
     } else if (bmiValue > 40) {
       category = obeseIII;
     }
+
     return category;
+  }
+
+  getHealRiskDescription(String categoryName) {
+    String desc = "";
+    switch (categoryName) {
+      case underweightSevere:
+        desc = "Possible nutritional deficiency and osteoporosis.";
+        break;
+      case underweightModerate:
+        desc = "Possible nutritional deficiency and osteoporosis.";
+        break;
+      case underweightMild:
+        desc = "Possible nutritional deficiency and osteoporosis.";
+        break;
+      case normal:
+        desc = "Low risk (Healthy range).";
+        break;
+      case overweight:
+        desc =
+            "Moderate risk of developing heart disease, high blood pressure, stroke, diabetes mellitus.";
+        break;
+      case obeseI:
+        desc =
+            "High risk of developing heart disease, high blood pressure, stroke, diabetes mellitus.";
+        break;
+      case obeseII:
+        desc =
+            "High risk of developing heart disease, high blood pressure, stroke, diabetes mellitus.";
+        break;
+      case obeseIII:
+        desc =
+            "High risk of developing heart disease, high blood pressure, stroke, diabetes mellitus.";
+        break;
+      default:
+    }
+
+    return desc;
   }
 
   @override
   Widget build(BuildContext context) {
+    final bmiCategory = determineBmiCategory(bmi);
+    final bmiDesc = getHealRiskDescription(bmiCategory);
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Hasil Hitung BMI"),
@@ -52,12 +93,13 @@ class BmiResultScreen extends StatelessWidget {
             flex: 8,
             child: BmiCard(
               child: Container(
+                width: double.infinity,
                 padding: const EdgeInsets.symmetric(horizontal: 15.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Text(
-                      determineBmiCategory(bmi),
+                      bmiCategory,
                       style: TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
@@ -73,7 +115,7 @@ class BmiResultScreen extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "Your BMI result is quite low, you should ead more",
+                      bmiDesc,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 20,
