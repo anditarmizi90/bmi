@@ -6,7 +6,7 @@ class BmiResultScreen extends StatelessWidget {
   const BmiResultScreen({Key? key, required this.bmi}) : super(key: key);
   final double bmi;
 
-  determineBmiCategory(double bmiValue) {
+  String determineBmiCategory(double bmiValue) {
     String category = "";
     if (bmiValue < 16.0) {
       category = underweightSevere;
@@ -29,7 +29,7 @@ class BmiResultScreen extends StatelessWidget {
     return category;
   }
 
-  getHealRiskDescription(String categoryName) {
+  String getHealRiskDescription(String categoryName) {
     String desc = "";
     switch (categoryName) {
       case underweightSevere:
