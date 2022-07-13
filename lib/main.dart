@@ -16,10 +16,14 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'BMI App',
         theme: ThemeData(
-          scaffoldBackgroundColor: primaryColor,
+          scaffoldBackgroundColor: Colors.white,
           primaryColor: primaryColor,
           appBarTheme: const AppBarTheme(
-            backgroundColor: primaryColor,
+            iconTheme: IconThemeData(color: primaryColor),
+            titleTextStyle: TextStyle(
+              color: primaryColor,
+            ),
+            backgroundColor: Colors.white,
           ),
           primarySwatch: Colors.blue,
         ),
