@@ -10,3 +10,12 @@ TextStyle numberStyle = TextStyle(
   fontWeight: FontWeight.bold,
   color: Colors.white,
 );
+
+String underweightSevere = "Underweight (Severe thinnes)";
+String underweightModerate = "Underweight (Moderate thinnes)";
+String underweightMild = "Underweight (Mild thinnes)";
+String normal = "Normal";
+String overweight = "Overweight";
+String obeseI = "Obese (Class I)";
+String obeseII = "Obese (Class II)";
+String obeseIII = "Obese (Class III)";

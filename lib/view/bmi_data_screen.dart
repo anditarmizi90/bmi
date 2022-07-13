@@ -14,6 +14,14 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
   int weight = 50;
   int age = 20;
 
+  double calculateBmi() {
+    double heightInMeter = height / 100;
+    final h = (heightInMeter * heightInMeter);
+    final bmi = weight / h;
+
+    return bmi;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,8 +84,8 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                       value: height.toDouble(),
                       min: 80,
                       max: 200,
-                      thumbColor: Colors.red,
-                      activeColor: Colors.white,
+                      thumbColor: Colors.pinkAccent,
+                      activeColor: Colors.purpleAccent,
                       onChanged: (value) {
                         height = value.toInt();
                         setState(() {});
@@ -225,14 +233,16 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: ((context) {
-                    return BmiResultScreen();
+                    return BmiResultScreen(
+                      bmi: calculateBmi(),
+                    );
                   }),
                 ),
               );
             },
             child: Container(
               height: 80,
-              color: Colors.pinkAccent,
+              color: Colors.blueGrey,
               child: Center(
                 child: Text(
                   "Hitung BMI",
