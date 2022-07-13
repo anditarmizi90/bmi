@@ -18,11 +18,11 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           scaffoldBackgroundColor: primaryColor,
           primaryColor: primaryColor,
-          appBarTheme: AppBarTheme(
+          appBarTheme: const AppBarTheme(
             backgroundColor: primaryColor,
           ),
           primarySwatch: Colors.blue,
         ),
-        home: BmiDataScreen());
+        home: const BmiDataScreen());
   }
 }

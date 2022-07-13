@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+// import 'package:google_fonts/google_fonts.dart';
 
-Color primaryColor = Color(0xff0a0e21);
-TextStyle? labelTexstyle = TextStyle(
+const Color primaryColor = Color(0xff0a0e21);
+TextStyle? labelTexstyle = const TextStyle(
   fontSize: 18,
   color: Colors.white,
 );
-TextStyle numberStyle = TextStyle(
+TextStyle numberStyle = const TextStyle(
   fontSize: 50,
   fontWeight: FontWeight.bold,
   color: Colors.white,

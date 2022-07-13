@@ -33,11 +33,7 @@ class BmiResultScreen extends StatelessWidget {
     String desc = "";
     switch (categoryName) {
       case underweightSevere:
-        desc = "Possible nutritional deficiency and osteoporosis.";
-        break;
       case underweightModerate:
-        desc = "Possible nutritional deficiency and osteoporosis.";
-        break;
       case underweightMild:
         desc = "Possible nutritional deficiency and osteoporosis.";
         break;
@@ -49,17 +45,12 @@ class BmiResultScreen extends StatelessWidget {
             "Moderate risk of developing heart disease, high blood pressure, stroke, diabetes mellitus.";
         break;
       case obeseI:
-        desc =
-            "High risk of developing heart disease, high blood pressure, stroke, diabetes mellitus.";
-        break;
       case obeseII:
-        desc =
-            "High risk of developing heart disease, high blood pressure, stroke, diabetes mellitus.";
-        break;
       case obeseIII:
         desc =
             "High risk of developing heart disease, high blood pressure, stroke, diabetes mellitus.";
         break;
+
       default:
     }
 
@@ -73,19 +64,17 @@ class BmiResultScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Hasil Hitung BMI"),
+        title: const Text("Hasil Hitung BMI"),
       ),
       body: Column(
         children: [
-          Expanded(
-            child: Container(
-              child: Text(
-                "Hasil Perhitungan",
-                style: TextStyle(
-                  fontSize: 45,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
+          const Expanded(
+            child: Text(
+              "Hasil Perhitungan",
+              style: TextStyle(
+                fontSize: 45,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
               ),
             ),
           ),
@@ -100,15 +89,15 @@ class BmiResultScreen extends StatelessWidget {
                   children: [
                     Text(
                       bmiCategory,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
                     ),
                     Text(
-                      "${bmi.toStringAsFixed(1)}",
-                      style: TextStyle(
+                      bmi.toStringAsFixed(1),
+                      style: const TextStyle(
                         fontSize: 100,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -117,7 +106,7 @@ class BmiResultScreen extends StatelessWidget {
                     Text(
                       bmiDesc,
                       textAlign: TextAlign.center,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -135,7 +124,7 @@ class BmiResultScreen extends StatelessWidget {
             child: Container(
               height: 80,
               color: Colors.blueGrey,
-              child: Center(
+              child: const Center(
                 child: Text(
                   "Hitung Ulang",
                   style: TextStyle(
