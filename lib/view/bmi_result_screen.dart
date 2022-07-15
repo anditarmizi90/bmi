@@ -7,57 +7,6 @@ class BmiResultScreen extends StatelessWidget {
   const BmiResultScreen({Key? key, required this.bmi}) : super(key: key);
   final double bmi;
 
-  // String determineBmiCategory(double bmiValue) {
-  //   String category = "";
-  //   if (bmiValue < 16.0) {
-  //     category = underweightSevere;
-  //   } else if (bmiValue >= 16.0 && bmiValue < 17) {
-  //     category = underweightModerate;
-  //   } else if (bmiValue >= 17.0 && bmiValue < 18.5) {
-  //     category = underweightMild;
-  //   } else if (bmiValue >= 18.5 && bmiValue < 25) {
-  //     category = normal;
-  //   } else if (bmiValue >= 25 && bmiValue < 30) {
-  //     category = overweight;
-  //   } else if (bmiValue >= 30 && bmiValue < 35) {
-  //     category = obeseI;
-  //   } else if (bmiValue >= 35 && bmiValue < 40) {
-  //     category = obeseII;
-  //   } else if (bmiValue > 40) {
-  //     category = obeseIII;
-  //   }
-
-  //   return category;
-  // }
-
-  // String getHealRiskDescription(String categoryName) {
-  //   String desc = "";
-  //   switch (categoryName) {
-  //     case underweightSevere:
-  //     case underweightModerate:
-  //     case underweightMild:
-  //       desc = "Possible nutritional deficiency and osteoporosis.";
-  //       break;
-  //     case normal:
-  //       desc = "Low risk (Healthy range).";
-  //       break;
-  //     case overweight:
-  //       desc =
-  //           "Moderate risk of developing heart disease, high blood pressure, stroke, diabetes mellitus.";
-  //       break;
-  //     case obeseI:
-  //     case obeseII:
-  //     case obeseIII:
-  //       desc =
-  //           "High risk of developing heart disease, high blood pressure, stroke, diabetes mellitus.";
-  //       break;
-
-  //     default:
-  //   }
-
-  //   return desc;
-  // }
-
   @override
   Widget build(BuildContext context) {
     final BmiCalculator bmiCalculator = BmiCalculator.fromValue(bmi);

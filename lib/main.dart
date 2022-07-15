@@ -1,5 +1,5 @@
 import 'package:bmi/constants/const.dart';
-import 'package:bmi/view/bmi_data_screen.dart';
+import 'package:bmi/view/bmi_splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -27,6 +27,6 @@ class MyApp extends StatelessWidget {
           ),
           primarySwatch: Colors.blue,
         ),
-        home: const BmiDataScreen());
+        home: const SplashScreen());
   }
 }
