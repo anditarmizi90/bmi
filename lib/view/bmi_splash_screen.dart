@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:bmi/main.dart';
 import 'package:bmi/view/bmi_data_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,13 +11,14 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  @override
   void initState() {
     super.initState();
     startSplashScreen();
   }
 
   startSplashScreen() async {
-    var duration = const Duration(seconds: 2);
+    var duration = const Duration(seconds: 1);
     return Timer(duration, () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (__) {
@@ -31,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 135, 199, 245),
+      backgroundColor: const Color.fromARGB(255, 145, 190, 223),
       body: Center(
         child: Image.asset(
           "assets/logo.png",

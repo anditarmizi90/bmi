@@ -2,6 +2,7 @@ import 'package:bmi/constants/const.dart';
 import 'package:bmi/helpers/bmi_calculator.dart';
 import 'package:bmi/view/bmi_data_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class BmiResultScreen extends StatelessWidget {
   const BmiResultScreen({Key? key, required this.bmi}) : super(key: key);
@@ -15,19 +16,20 @@ class BmiResultScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child: Text("Hasil Hitung BMI")),
+        title: Center(
+          child: Text(
+            "Hasil Hitung BMI",
+            style: GoogleFonts.acme(fontWeight: FontWeight.bold),
+          ),
+        ),
       ),
       body: Column(
         children: [
-          const Expanded(
-            child: Text(
-              "Hasil Perhitungan",
-              style: TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.bold,
-                color: primaryColor,
-              ),
-            ),
+          Expanded(
+            child: Text("Hasil Perhitungan",
+                style: GoogleFonts.alike(
+                  fontSize: 45,
+                )),
           ),
           Expanded(
             flex: 10,
@@ -79,14 +81,10 @@ class BmiResultScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(30),
                 color: const Color.fromARGB(255, 238, 100, 45),
               ),
-              child: const Center(
+              child: Center(
                 child: Text(
                   "Hitung Ulang",
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
+                  style: GoogleFonts.alike(),
                 ),
               ),
             ),

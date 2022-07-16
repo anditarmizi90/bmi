@@ -3,6 +3,7 @@ import 'package:bmi/helpers/bmi_calculator.dart';
 import 'package:bmi/view/bmi_result_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class BmiDataScreen extends StatefulWidget {
   const BmiDataScreen({Key? key}) : super(key: key);
@@ -16,14 +17,6 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
   int weight = 50;
   int age = 20;
   String? gender;
-
-  // double calculateBmi() {
-  //   double heightInMeter = height / 100;
-  //   final h = (heightInMeter * heightInMeter);
-  //   final bmi = weight / h;
-
-  //   return bmi;
-  // }
 
   List<Widget> generateList(start, end) {
     List<Widget> weights = [];
@@ -46,7 +39,12 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
       // backgroundColor: const Color(0xff0a0e21),
       appBar: AppBar(
         elevation: 0,
-        title: const Center(child: Text("BMI Calculator")),
+        title: Center(
+          child: Text(
+            "BMI Calculator",
+            style: GoogleFonts.acme(fontWeight: FontWeight.bold),
+          ),
+        ),
       ),
       bottomNavigationBar: GestureDetector(
         onTap: () {
@@ -69,14 +67,10 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
             borderRadius: BorderRadius.circular(30),
             color: const Color(0xff517DF6),
           ),
-          child: const Center(
+          child: Center(
             child: Text(
               "Hitung BMI",
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),
+              style: GoogleFonts.alike(),
             ),
           ),
         ),
