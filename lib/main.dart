@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
             titleTextStyle: TextStyle(
               color: primaryColor,
             ),
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.blue,
           ),
           primarySwatch: Colors.blue,
         ),
